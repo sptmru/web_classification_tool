@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ title }}</title>
+    <!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="stylesheets/upload.css">
+
+
+  </head>
+  <body>
+    <div class="container">
+    	<p class="text-center"> {{ upload_status }} </p>
+	    <form class="form-upload" enctype="multipart/form-data" action="/uploaddata" method="post">
+		    <h2 class="form-signin-heading">{{ title }}</h2>
+		    <label for="inputFile" class="sr-only">Select a file</label>
+		    <input type="file" id="inputFile" class="form-control" name="csvfile" placeholder="CSV file" required autofocus>
+		    <button class="btn btn-lg btn-primary btn-block" type="submit">Upload File</button>
+		</form>
+	</div>
+  </body>
+</html>

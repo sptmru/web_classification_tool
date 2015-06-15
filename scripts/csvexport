@@ -1,0 +1,2 @@
+#!/bin/sh
+mongoexport --csv --db classification --collection classification -out /home/ubuntu/app/public/csv/$1.csv -f name,handle,profile_url,background_url,text,timedate,classification1,classification2,_id

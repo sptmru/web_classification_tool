@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ name }}</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="stylesheets/classify.css">
+  </head>
+  <body>
+
+  <div class="wrapper">
+            
+            <div class="card radius shadowDepth1">
+                <div class="card__image border-tlr-radius">
+                    <img src="{{background_url}}" alt="background_url" width="400px" height="200px" class="border-tlr-radius">
+                </div>
+
+                <div class="card__content card__padding">
+                    
+
+                    <div class="card__meta">
+                        <time>{{timedate}}</time>
+                    </div>
+
+                    <article class="card__article">
+                        <h2>{{name}}</h2>
+
+                        <p>{{text}}</p>
+                    </article>
+                </div>
+
+                <div class="card__action">
+                    
+                    <div class="card__author">
+                        <img src="{{profile_url}}" alt="profile_url" width="40px" height="40px">
+                        <a href="/classifying?id={{id}}&define=technical"><button type="button" class="btn btn-primary">Technical</button></a>
+                        <a href="/classifying?id={{id}}&define=nottechnical"><button type="button" class="btn btn-primary">Not Technical</button></a>
+                        <div class="card__author-content">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+  </body>
+</html>
+
+

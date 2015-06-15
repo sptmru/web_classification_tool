@@ -1,0 +1,2 @@
+#!/bin/sh
+/bin/cat /home/ubuntu/app/uploads/$1 | sed 's/"[^"]*"/"((&))"/g' | sed 's/\(\"((\"\)\([^",]*\)\(,\)\([^",]*\)\(\"))\"\)/"\2\4"/g' | awk -F',' 'BEGIN{OFS=","} {print $1,$2,$5,$3,$4,$6}' | sed 's/"(("/"/g' | sed 's/"))"/"/g' | mongoimport --headerline --type csv --db classification --collection classification
